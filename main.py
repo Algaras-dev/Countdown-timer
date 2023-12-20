@@ -103,7 +103,7 @@ def main():
 
                 # Get the ascii art for a number at the current row and add it together with two
                 # whitespaces
-                countdown += f'{ascii_num[row * numb_len:row * numb_len + numb_len]} '
+                countdown += f'{ascii_num[row * numb_len:row * numb_len + numb_len]}  '
 
             # Add newlines after each completed row of charachters
             countdown += '\n'
