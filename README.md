@@ -8,3 +8,4 @@ A simple countdown made with python. Text is displayed in terminal.
 ## Usage
 - Run the python file with the python interpreter or launch executable
 - Input the desired date to count towards
+- Program displays remaing time in d:HH:MM:SS
