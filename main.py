@@ -77,12 +77,14 @@ def main():
     target_time = get_target_date()
     current_time = datetime.now()
 
-    # Wait for second synching
-    while current_time.microsecond >= 1000:
-        current_time = datetime.now()
-
     # Run until hitting target time
     while current_time <= target_time:
+
+        # Sleep until next second
+        time.sleep((999_999 - current_time.microsecond)/1_000_000)
+
+        # Refresh current time
+        current_time = datetime.now()
 
         # Calculate delta
         delta = target_time - current_time
@@ -111,12 +113,6 @@ def main():
         # Clear terminal and print countdown
         os.system('cls')
         print(countdown)
-
-        # Refresh current time
-        current_time = datetime.now()
-
-        # Sleep until next second
-        time.sleep((999_999 - current_time.microsecond)/1_000_000)
 
 if __name__ == '__main__':
     main()
