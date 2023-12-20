@@ -4,7 +4,8 @@ import os
 import time
 from datetime import datetime
 
-# Ascii art charachters used to display the countdown (taken from: https://patorjk.com/software/taag/#p=display&f=Doh&t=)
+# Ascii art charachters used to display the countdown
+# taken from: https://patorjk.com/software/taag/#p=display&f=Doh&t=
 _ascii_charachters = {
     '0': '''     000000000        00:::::::::00    00:::::::::::::00 0:::::::000:::::::00::::::0   0::::::00:::::0     0:::::00:::::0     0:::::00:::::0 000 0:::::00:::::0 000 0:::::00:::::0     0:::::00:::::0     0:::::00::::::0   0::::::00:::::::000:::::::0 00:::::::::::::00    00:::::::::00        000000000     ''',
 
@@ -102,7 +103,7 @@ def main():
 
                 # Get the ascii art for a number at the current row and add it together with two
                 # whitespaces
-                countdown += f'{ascii_num[row * numb_len:row * numb_len + numb_len]}  '
+                countdown += f'{ascii_num[row * numb_len:row * numb_len + numb_len]} '
 
             # Add newlines after each completed row of charachters
             countdown += '\n'
